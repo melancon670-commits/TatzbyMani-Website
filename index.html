@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TatzByMani</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+body{background:#050505;color:white;font-family:'Poppins',sans-serif;}
+nav{
+display:flex;justify-content:space-between;align-items:center;
+padding:20px 8%;position:fixed;width:100%;
+background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);z-index:999;
+}
+.logo{
+font-family:'Playfair Display',serif;
+font-size:28px;color:#d90429;letter-spacing:3px;
+}
+nav a{color:white;text-decoration:none;margin-left:25px;font-size:14px;}
+nav a:hover{color:#d90429;}
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.95)),
+url(images/tattoo15.jpg) no-repeat;
+background-size:cover;background-position:center;
+display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;
+}
+.hero h1{font-family:'Playfair Display',serif;font-size:64px;}
+.hero span{color:#d90429;}
+.btn{
+padding:14px 40px;background:#d90429;border:none;color:white;
+letter-spacing:2px;cursor:pointer;margin-top:20px;
+}
+.btn:hover{background:white;color:black;}
+
+section{padding:100px 8%;}
+.title{font-family:'Playfair Display',serif;font-size:40px;color:#d90429;margin-bottom:25px;}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.gallery img{width:100%;height:320px;object-fit:cover;border-radius:8px;}
+
+.box{
+max-width:1000px;margin:auto;background:rgba(255,255,255,.03);
+padding:40px;border-radius:12px;
+}
+
+form input,form textarea,form select{
+width:100%;padding:12px;margin:10px 0;background:#111;border:1px solid #333;color:white;
+}
+
+footer{text-align:center;padding:40px;background:black;opacity:.7;}
+@media(max-width:900px){.hero h1{font-size:42px;}}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">TatzByMani</div>
+<div>
+<a href="#about">About</a>
+<a href="#gallery">Work</a>
+<a href="#pricing">Pricing</a>
+<a href="#booking">Book</a>
+<a href="#faq">FAQ</a>
+</div>
+</nav>
+
+<section class="hero">
+<div>
+<h1>Luxury Ink by <span>Mani</span></h1>
+<p>Precision tattoos. Professional experience. Permanent art.</p>
+<a href="booking.html"><button class="btn">Book Now</button>
+</a>
+</div>
+</section>
+
+<section id="about">
+<h2 class="title">About Mani</h2>
+<div class="box">
+<p>
+Born in Oakland and raised in Sacramento, Mani turned her artistic passion into a professional career beginning September 13th, 2023
+She focuses on precision, cleanliness, and creating tattoos that represent identity and story with a luxury client experience she is proud to offer. Mani specializes in fine line, blackwork, and lettering tattoos, but is open to all styles and custom requests. With a commitment to quality and client satisfaction, Mani ensures every tattoo is a unique work of art that clients will cherish forever.
+</p>
+</div>
+</section>
+
+<section id="gallery">
+<h2 class="title">Recent Work</h2>
+<div class="gallery">
+<img src="images/tattoo2.jpg">
+<img src="images/tattoo3.jpg">
+<img src="images/tattoo1.jpg">
+<img src="images/tattoo4.jpg">
+<img src="images/tattoo5.jpg"> 
+<img src="images/tattoo6.jpg">
+<img src="images/tattoo7.jpg">
+<img src="images/tattoo8.jpg">
+<img src="images/tattoo9.jpg">
+<img src="images/tattoo10.jpg">
+<img src="images/tattoo11.jpg">
+<img src="images/tattoo12.jpg">
+<img src="images/tattoo13.jpg">
+<img src="images/tattoo14.jpg">
+<img
+</div>
+</section>
+
+<section id="pricing">
+<h2 class="title">Pricing Guide</h2>
+<div class="box">
+<ul>
+<li>Minimum tattoo price in order to book: $70 </li>
+<li>Finger tattoos $15-60
+</li>Small face tattoos $20-80
+<li>Medium tattoos $70-160</li>
+<li>Large tattoos $160-200</li>
+<li>Quarter Sleeve $125-190</li>
+<li>Half Sleeve $200-380</li>
+<li>Full Sleeve $500-700</li>
+<li>upper arm half sleeve $300-450</li>
+<li>Full side neck $150-200</li>
+<li> Full neck $200-300</li>
+<li> Spine full back or half (words only)$165-200</li>
+<li> Full back $300-850</li>
+<li> Half Thigh $200-350</li>
+<li> full thigh $400-700</li>
+<li> Full leg sleeve $600-900</li>
+<li> Tapout session$150-$350</li>
+<li>Deposit required to book:$25 </li>
+</ul>
+</div>
+</section>
+<section>
+<h2 class="title">Tattoo Request Form</h2>
+<div class="box">
+<form action="https://formspree.io/f/YOURFORM" method="POST">
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Email" required>
+
+<select name="style">
+<option>Fine Line</option>
+<option>Blackwork</option>
+<option>Lettering</option>
+<option>Custom</option>
+</select>
+
+<textarea name="idea" placeholder="Describe your tattoo idea"></textarea>
+
+<textarea required>
+I confirm I am 16+, and I understand that you are not a licensed tattoo artist. I understand tattoos are permanent, and I accept deposit policies, including that they are nonrefundable.
+</textarea>
+
+<button class="btn">Submit Request</button>
+</form>
+</div>
+</section>
+
+<section id="faq">
+<h2 class="title">FAQ</h2>
+<div class="box">
+<p><b>Do deposits go toward the tattoo?</b><br>Yes, deposits apply to final price.</p>
+<p><b>Can I reschedule?</b><br>Yes with 48h notice.</p>
+<p><b>Do you design customs?</b><br>Yes, every tattoo is custom only with deposits.</p>
+</div>
+</section>
+
+<footer>
+© 2026 TatzByMani • Luxury Tattoo Studio Experience
+
+<!-- Deposit Section -->
+<div class="deposit-section">
+<h2>$25 Deposit Required</h2>
+
+<p>A $25 non-refundable deposit is required to secure your appointment. Your appointment is not confirmed until deposit is received.</p>
+
+<a href="https://cash.app/$imoneyygang/25" target="_blank" class="btn-deposit">
+Pay $25 Deposit
+</a>
+
+<div class="policy">
+Deposits go toward the final tattoo price.
+Deposits are non-refundable but may be transferred one time if rescheduled at least 24 hours before the appointment.
+No-shows or same-day cancellations forfeit the deposit.
+</div>
+</div>
+
+<style>
+.btn-deposit {
+display: inline-block;
+background-color: #222; /* dark button */
+color: #f5f5f5; /* white text */
+padding: 14px 35px;
+font-size: 18px;
+font-weight: 600;
+text-decoration: none;
+border-radius: 6px;
+border: 2px solid #f5f5f5; /* subtle border */
+transition: all 0.3s ease;
+}
+
+.btn-deposit:hover {
+background-color: #f5f5f5;
+color: #111;
+border-color: #00C244; /* small hint of green on hover */
+}
+</style>
